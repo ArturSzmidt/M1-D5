@@ -145,6 +145,8 @@ const deleteOne= function (first,trueFalse) {
   }
 let deleteOneResult = deleteOne("12345 Pis", false)
 console.log(deleteOneResult)
+console.log("///////////////////////////////////////")
+
 
 
 
@@ -158,13 +160,41 @@ console.log(deleteOneResult)
 let greeting = "elo elo 320"
 const onlyLetters = greeting.replace(/\d+/g, '')
 console.log(onlyLetters)
+console.log("///////////////////////////////////////")
+
+
 /* Ex.6 
-   Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
+   Write a function called "isThisAnEmail" 
+   which receives a string as a parameter and returns true if the string is a valid email address.
 */
+let isThisAnEmail = function(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    
+console.log(isThisAnEmail('isthis@email.com'));
+console.log("///////////////////////////////////////")
+
+
+
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+
+let day=new Array(7);
+day[0]="Monday";
+day[1]="Tuesday";
+day[2]="Wednesday";
+day[3]="Thursday";
+day[4]="Friday";
+day[5]="Saturday";
+day[6]="Sunday";
+console.log("Today is " + day[5]);
+console.log("///////////////////////////////////////")
+
+
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
@@ -177,31 +207,76 @@ console.log(onlyLetters)
     }
 */
 
+
+
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
+
+
+const howManyDays = function(dt) {
+  let current = new Date(dt.getTime());
+  let previous = new Date(dt.getFullYear(), 0, 1);
+
+  return Math.ceil((current - previous + 1) / 86400000);
+}
+console.log(howManyDays(new Date(2021, 0, 1)));
+console.log(howManyDays(new Date(2021, 11, 1)));
+console.log("///////////////////////////////////////")
+
+
+
+
+
+
 
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
 
+
+const isTodayMyBirthday = function() {
+  let day = new Date().getDate();
+  let month = new Date().getMonth();
+  if (day===8 && month===1) {
+      return true
+    }
+      else {
+          return false
+      }
+    }
+      let isTodayMyBirthdayResult = isTodayMyBirthday(1,8)
+console.log(isTodayMyBirthdayResult)
+// console.log("///////////////////////////////////////")
+
+
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
 /* Ex.11
-   Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
+   Write a function called "deleteProp" which receives an object and a string as parameters,
+    and returns the given object after deleting its property named as the given string.
 */
+
 
 /* Ex.12 
-    Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
+    Write a function called "olderMovie" which finds the oldest
+     movie in the array provided at the end of this file.
 */
+
+
+
 
 /* Ex.13
-    Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
+    Write a function called "countMovies"
+     which returns the number of movies contained in the array provided at the end of this file.
 */
 
+
+
 /* Ex.14
-    Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
+    Write a function called "onlyTheTitles" which creates an array with just the titles of the 
+    movies provided in the array at the end of the file.
 */
 
 /* Ex.15
@@ -227,13 +302,15 @@ console.log(onlyLetters)
 */
 
 /* Ex.20
-   Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
+   Write a function called "removeIndex" which receives a number
+    as a parameter and returns the movies array without the element in the given position.
 */
 
 // [EXTRAS] JS Advanced
 
 /* Ex.21
-  Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.
+  Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with
+   the given height.
   Example:
   halfTree(3)
   *
@@ -251,7 +328,8 @@ console.log(onlyLetters)
 */
 
 /* Ex.23
-  Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
+  Create a function called "isItPrime" that receives a number as a parameter and 
+  returns true if the given number is a prime number.
 */
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
@@ -369,3 +447,9 @@ const movies = [
         "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
     },
   ]
+
+
+
+
+
+  
