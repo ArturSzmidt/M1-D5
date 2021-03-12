@@ -85,13 +85,15 @@ console.log("///////////////////////////////////////")
 
 
 
-// const dice= function(min,max){
-//   min = Math.ceil(min)
-//   max = Math.ceil(max)
-//   return Math.floor(Math.random()* (max - min)) + min;
-// }
-// let diceResult = dice(1,6)
-// console.log(diceResult)
+const dice= function(min,max){
+  min = Math.ceil(min)
+  max = Math.ceil(max)
+  return Math.floor(Math.random()* (max - min)) + min;
+}
+let diceResult = dice(1,6)
+console.log(diceResult)
+console.log("///////////////////////////////////////")
+
 
 
 
@@ -110,22 +112,52 @@ const whoIsBigger = function(first,second) {
 let whoIsBiggerRestult = whoIsBigger(12,17)
 
 console.log(whoIsBiggerRestult)
+console.log("///////////////////////////////////////")
 
 
 /* Ex.3
-    Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
+    Write a function called "splitMe" which receives a string as a parameter 
+    and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
+const splitMe = "I Love Coding"
+let splitMeRestult =splitMe.split(" ")
+console.log(splitMeRestult)
+console.log("///////////////////////////////////////")
 /* Ex.4
-    Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
+    Write a function called "deleteOne" which receives a string and a boolean as parameters.
+     If the boolean value is true it should return the string without the first letter,
+      otherwise it should remove the last one from it.
 */
+
+// let deleteOne = "deleteOne"
+// let deleteOneResult = deleteOne.substring(1)
+// console.log(deleteOneResult)
+
+const deleteOne= function (first,trueFalse) {
+  if (trueFalse===true) {
+      let cutted = first.slice (1)
+      console.log(cutted)}
+      else {
+          console.log(first.slice (0, -1))
+      }
+  }
+let deleteOneResult = deleteOne("12345 Pis", false)
+console.log(deleteOneResult)
+
+
+
+
+
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
-
+let greeting = "elo elo 320"
+const onlyLetters = greeting.replace(/\d+/g, '')
+console.log(onlyLetters)
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
